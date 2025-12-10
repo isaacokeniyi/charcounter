@@ -1,12 +1,12 @@
 const text = document.querySelector("#text");
 const counter = document.querySelector("#counter");
 const countBtn = document.querySelector("#countBtn");
-let countSpace = true;
 
 const countChar = () => {
-  const charCount = countSpace ? text.value.length : text.value.replaceAll(" ", "").length;
+  const charCount = text.value.length;
+  const charCountWithoutSpaces = text.value.replaceAll(" ", "").length;
   const wordCount = text.value === "" ? 0 : text.value.trim().split(" ").length;
-  counter.textContent = `Characters: ${charCount} | Words: ${wordCount}`;
+  counter.textContent = `Characters: ${charCount} | ${charCountWithoutSpaces} (without spaces) || Words: ${wordCount}`;
 };
 
 countBtn.addEventListener("click", () => {
