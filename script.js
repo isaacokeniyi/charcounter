@@ -7,3 +7,7 @@ const countChar = () => {
   const wordCount = text.value === "" ? 0 : text.value.trim().split(" ").length;
   counter.textContent = `Characters: ${charCount} | ${charCountWithoutSpaces} (without spaces) || Words: ${wordCount}`;
 };
+
+const clearInput = () => {
+  text.textContent = "";
+};
