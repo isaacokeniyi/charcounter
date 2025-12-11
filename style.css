@@ -17,3 +17,9 @@ textarea {
   margin-top: 1rem;
   font-size: 1.2rem;
 }
+
+#clear {
+  color: white;
+  background-color: red;
+  padding: 0.6rem 0.3rem;
+}
