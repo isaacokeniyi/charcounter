@@ -10,4 +10,5 @@ const countChar = () => {
 
 const clearInput = () => {
   text.value = "";
+  countChar();
 };
