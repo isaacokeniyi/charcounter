@@ -9,5 +9,5 @@ const countChar = () => {
 };
 
 const clearInput = () => {
-  text.textContent = "";
+  text.value = "";
 };
