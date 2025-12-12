@@ -5,7 +5,11 @@ const countChar = () => {
   const charCount = text.value.length;
   const charCountWithoutSpaces = text.value.replaceAll(" ", "").length;
   const wordCount = text.value === "" ? 0 : text.value.trim().split(" ").length;
-  counter.textContent = `Characters: ${charCount} | ${charCountWithoutSpaces} (without spaces) || Words: ${wordCount}`;
+  counter.innerHTML = `
+  <li>Characters: ${charCount} </li>
+  <li>Characters without spaces: ${charCountWithoutSpaces} </li>
+  <li>Words: ${wordCount}</li>
+  `;
 };
 
 const clearInput = () => {
