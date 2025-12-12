@@ -10,7 +10,11 @@
     <h1 id="heading">Character Counter</h1>
 
     <textarea id="text" placeholder="Type something..." oninput="countChar()"></textarea>
-    <div id="counter">Characters: 0 | 0 (without spaces) || Words: 0</div>
+    <ul id="counter">
+      <li>Characters: 0 </li>
+      <li>Characters without spaces: 0 </li>
+      <li>Words: 0</li>
+    </ul>
     <button id="clear" onclick="clearInput()">Clear X</button>
     <script src="script.js"></script>
   </body>
