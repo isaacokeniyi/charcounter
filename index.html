@@ -11,11 +11,19 @@
 
     <textarea id="text" placeholder="Type something..." oninput="countChar()"></textarea>
     <ul id="counter">
-      <li>Characters: 0 </li>
-      <li>Characters without spaces: 0 </li>
+      <li>Characters: 0</li>
+      <li>Characters without spaces: 0</li>
       <li>Words: 0</li>
     </ul>
-    <button id="clear" onclick="clearInput()">Clear X</button>
+    <div id="options">
+      <button id="clear" onclick="clearInput()">Clear X</button>
+      <select id="theme" onchange="switchTheme()">
+        <option disabled selected>Select theme</option>
+        <option value="device">device</option>
+        <option value="light">light</option>
+        <option value="dark">dark</option>
+      </select>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

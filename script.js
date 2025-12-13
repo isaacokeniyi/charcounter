@@ -1,5 +1,7 @@
 const text = document.querySelector("#text");
 const counter = document.querySelector("#counter");
+const theme = document.querySelector("#theme");
+const all = document.querySelectorAll("html *");
 
 const countChar = () => {
   const charCount = text.value.replaceAll(/\n/g, "").length;
@@ -15,4 +17,22 @@ const countChar = () => {
 const clearInput = () => {
   text.value = "";
   countChar();
+};
+
+const switchTheme = () => {
+  switch (theme.value) {
+    case "dark":
+      all.forEach((elem) => {
+        elem.classList.add("darkmode");
+      });
+      break;
+    case "device":
+      all.forEach((elem) => {
+        elem.classList.remove("darkmode");
+      });
+      break;
+
+    default:
+      break;
+  }
 };
