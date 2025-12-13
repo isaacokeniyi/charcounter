@@ -3,7 +3,7 @@ const counter = document.querySelector("#counter");
 
 const countChar = () => {
   const charCount = text.value.length;
-  const charCountWithoutSpaces = text.value.replaceAll(" ", "").length;
+  const charCountWithoutSpaces = text.value.replaceAll(/\s/g, "").length;
   const wordCount = text.value === "" ? 0 : text.value.trim().split(" ").length;
   counter.innerHTML = `
   <li>Characters: ${charCount} </li>
