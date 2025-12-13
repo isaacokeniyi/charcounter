@@ -14,7 +14,7 @@ textarea {
 }
 
 #counter {
-  margin: 1rem 2rem 1rem  0;
+  margin: 1rem 2rem 1rem 0;
   font-size: 1.2rem;
   list-style: none;
   padding-left: 0;
@@ -31,4 +31,11 @@ textarea {
 
 #clear:hover {
   background-color: #fc3131;
+}
+
+@media (prefers-color-scheme: dark) {
+  html * {
+    background-color: black;
+    color: white;
+  }
 }
