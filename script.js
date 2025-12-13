@@ -2,6 +2,7 @@ const text = document.querySelector("#text");
 const counter = document.querySelector("#counter");
 const theme = document.querySelector("#theme");
 const all = document.querySelectorAll("html *");
+const deviceTheme = document.querySelector("#device-theme");
 
 const countChar = () => {
   const charCount = text.value.replaceAll(/\n/g, "").length;
@@ -21,14 +22,19 @@ const clearInput = () => {
 
 const switchTheme = () => {
   switch (theme.value) {
-    case "dark":
-      all.forEach((elem) => {
-        elem.classList.add("darkmode");
-      });
-      break;
     case "device":
+      deviceTheme.disabled = false;
+      break;
+    case "light":
+      deviceTheme.disabled = true;
       all.forEach((elem) => {
         elem.classList.remove("darkmode");
+      });
+      break;
+    case "dark":
+      deviceTheme.disabled = true;
+      all.forEach((elem) => {
+        elem.classList.add("darkmode");
       });
       break;
 
