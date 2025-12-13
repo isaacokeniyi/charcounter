@@ -24,6 +24,7 @@ const switchTheme = () => {
   switch (theme.value) {
     case "device":
       deviceTheme.disabled = false;
+      window.location.reload();
       break;
     case "light":
       deviceTheme.disabled = true;
