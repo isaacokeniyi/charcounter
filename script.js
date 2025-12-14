@@ -21,6 +21,8 @@ const countChar = () => {
   <li>Characters without spaces: ${charCountWithoutSpaces} </li>
   <li>Words: ${wordCount}</li>
   `;
+
+  localStorage.setItem("text", text.value);
 };
 
 const clearInput = () => {
@@ -32,7 +34,6 @@ const switchTheme = () => {
   switch (theme.value) {
     case "device":
       deviceTheme.disabled = false;
-      localStorage.setItem("text", text.value);
       window.location.reload();
       break;
     case "light":
