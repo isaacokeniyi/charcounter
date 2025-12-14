@@ -8,6 +8,7 @@ window.addEventListener("load", () => {
   const currentText = localStorage.getItem("text");
   if (currentText) {
     text.value = currentText;
+    countChar();
   }
 });
 
