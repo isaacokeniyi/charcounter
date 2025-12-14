@@ -25,12 +25,14 @@
     </ul>
     <div id="options">
       <button id="clear" onclick="clearInput()">Clear X</button>
-      <select id="theme" onchange="switchTheme()">
-        <option disabled selected>Select theme</option>
-        <option value="device">device</option>
-        <option value="light">light</option>
-        <option value="dark">dark</option>
-      </select>
+      <label for="theme">
+        Select theme:
+        <select id="theme" onchange="switchTheme()">
+          <option value="device">device</option>
+          <option value="light">light</option>
+          <option value="dark">dark</option>
+        </select>
+      </label>
     </div>
     <script src="script.js"></script>
   </body>
